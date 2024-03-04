@@ -133,7 +133,7 @@ int main(int argc, char **argv)
 	szInputFile = (char *)malloc(256 * sizeof(char));
 	if (NULL == szInputFile)
 	{
-		printf("Failed to allocate memory");
+		printf("Failed to allocate memory\n");
 		return -1;
 	}
 
