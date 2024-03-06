@@ -26,7 +26,7 @@ void day(FILE *pFile)
 	if (!feof(pFile))
 	{
 		printf("ERROR failed to read file! %s\n", strerror(errno));
-		return errno;
+		return;
 	}
 }
 

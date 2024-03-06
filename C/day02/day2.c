@@ -104,7 +104,7 @@ bool isValidGame(char **szGameDraws, long *plRetPower)
  * 
  * in: fp - An open file pointer, freed by the caller
 */
-int day2_1(FILE *pFile)
+void day2_1(FILE *pFile)
 {
 	char szBuffer[LINE_BUFFER_SIZE] = { 0 };
 	char *pCur = NULL;
@@ -129,7 +129,7 @@ int day2_1(FILE *pFile)
 		if (EOF == sscanf(szBuffer, "Game %d", &iGameID))
 		{
 			printf("ERROR reading %s: %s\n", szBuffer, strerror(errno));
-			return errno;
+			return;
 		}
 
 		if (isValidGame(&tokptr, &lGamePow))
@@ -141,13 +141,13 @@ int day2_1(FILE *pFile)
 	if (!feof(pFile))
 	{
 		printf("ERROR failed to read file! %s\n", strerror(errno));
-		return errno;
+		return;
 	}
 
 	printf("Part one game ID total is %d\n", iSumGameIDs);
 	printf("Part two minimum power total is %ld\n", lTotalPow);
 
-	return 0;
+	return;
 }
 
 int main(int argc, char **argv)
@@ -172,7 +172,7 @@ int main(int argc, char **argv)
 		return -1;
 	}
 
-	ret = day2_1(pFile);
+	day2_1(pFile);
 
 	if (pFile)
 		fclose(pFile);
