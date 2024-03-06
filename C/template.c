@@ -12,7 +12,7 @@
  * 
  * in: fp - An open file pointer, freed by the caller
 */
-int day(FILE *pFile)
+void day(FILE *pFile)
 {
 	char szBuffer[LINE_BUFFER_SIZE] = { 0 };
 	char *pCur = NULL;
@@ -28,8 +28,6 @@ int day(FILE *pFile)
 		printf("ERROR failed to read file! %s\n", strerror(errno));
 		return errno;
 	}
-
-	return 0;
 }
 
 int main(int argc, char **argv)
@@ -54,7 +52,7 @@ int main(int argc, char **argv)
 		return -1;
 	}
 
-	ret = day(pFile);
+	day(pFile);
 
 	if (pFile)
 		fclose(pFile);
