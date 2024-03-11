@@ -20,7 +20,7 @@ bool IsDigit(char *pszC, int *pNum);
  * 
  * Each line is guaranteed to contain a digit
  * 
- * in: fp - An open file pointer, freed by the caller
+ * in: pFile - An open file pointer, freed by the caller
 */
 int day1_1(FILE *pFile)
 {
@@ -81,7 +81,7 @@ int day1_1(FILE *pFile)
  * Each line is guaranteed to contain a digit
  * Spelled digits are lowercase
  * 
- * in: fp - An open file pointer, freed by the caller
+ * in: pFile - An open file pointer, freed by the caller
 */
 int day1_2(FILE *pFile)
 {

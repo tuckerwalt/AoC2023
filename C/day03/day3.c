@@ -28,7 +28,7 @@
  * 
  * In the above schematic, 114 and 58 are NOT part numbers
  * 
- * in: fp - An open file pointer, freed by the caller
+ * in: pFile - An open file pointer, freed by the caller
 */
 void day1_1(FILE *pFile)
 {
@@ -135,7 +135,7 @@ void day1_1(FILE *pFile)
  * A gear is a symbol (non '.') that is adjacent to exactly two part numbers,
  * and its ratio is the product of the two part numbers
  * 
- * in: fp - An open file pointer, freed by the caller
+ * in: pFile - An open file pointer, freed by the caller
 */
 void day1_2(FILE *pFile)
 {

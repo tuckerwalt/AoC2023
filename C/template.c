@@ -10,7 +10,7 @@
 /**
  * Problem description here
  * 
- * in: fp - An open file pointer, freed by the caller
+ * in: pFile - An open file pointer, freed by the caller
 */
 void day(FILE *pFile)
 {

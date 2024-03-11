@@ -65,7 +65,7 @@ int scratchCard(char **pszGameDraws, int *piMatches)
  * Card 1: 41 48 83 86 17 | 83 86  6 31 17  9 48 53
  * This card has 4 matching winning numbers and thus a point value of 8
  * 
- * in: fp - An open file pointer, freed by the caller
+ * in: pFile - An open file pointer, freed by the caller
 */
 void day4_1(FILE *pFile)
 {
@@ -106,7 +106,7 @@ void day4_1(FILE *pFile)
  * This card has 4 matching winning numbers and thus gives a copy of card 2, 3, 4, and 5
  * Card 2 would then be evaluated two times, and so on
  * 
- * in: fp - An open file pointer, freed by the caller
+ * in: pFile - An open file pointer, freed by the caller
 */
 void day4_2(FILE *pFile)
 {

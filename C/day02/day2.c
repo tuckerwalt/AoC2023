@@ -102,7 +102,7 @@ bool isValidGame(char **szGameDraws, long *plRetPower)
  * 
  * Part two: Find the sum of the minimum "powers" of each game.
  * 
- * in: fp - An open file pointer, freed by the caller
+ * in: pFile - An open file pointer, freed by the caller
 */
 void day2_1(FILE *pFile)
 {
