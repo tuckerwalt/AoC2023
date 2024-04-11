@@ -129,7 +129,7 @@ long countPower(BOX *box)
 }
 
 //Pretty prints the box and its lenses
-printBox(BOX *box)
+void printBox(BOX *box)
 {
 	LENS *cur = box->first;
 	int iLensNum = 1;
