@@ -10,15 +10,6 @@
 #define LINE_BUFFER_SIZE 100
 #define BASE_CAPACITY 10
 
-/** 
- * A connection simply holds a pointer to an edge
- * Connections are unique, but edges may be shared
- * For example, when node A connects to node B, both nodes hold a unique 
- * connection structure for this edge in their list, but both connections 
- * point to the same edge in memory. 
-*/ 
-typedef struct connection CONNECTION;
-
 /**
  * A node in an undirected graph, storing a count of merged nodes and
  * an adjacency list for connected nodes.
@@ -29,7 +20,7 @@ typedef struct node
 	char name[4];
 
 	/// Doubly linked list of connections(edges) for this node
-	CONNECTION *connections;
+	struct connection *connections;
 	
 	/// A count of the nodes that have been merged into this node(+1)
 	int iNodesInNode;
@@ -46,14 +37,21 @@ typedef struct edge
 	int index;
 } EDGE;
 
-struct connection
+/** 
+ * A connection simply holds a pointer to an edge
+ * Connections are unique, but edges may be shared
+ * For example, when node A connects to node B, both nodes hold a unique 
+ * connection structure for this edge in their list, but both connections 
+ * point to the same edge in memory. 
+*/ 
+typedef struct connection
 {
 	EDGE *edge;
 
 	/// linked list
 	struct connection *prev;
 	struct connection *next;
-};
+} CONNECTION;
 
 /// Prints the edge array
 void printEdges(EDGE **edges, int iEdges)
