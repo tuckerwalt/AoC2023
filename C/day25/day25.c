@@ -397,6 +397,7 @@ retry:
 		while (tok != NULL)
 		{
 			// For each connected node, add it to the table if necessary and 
+			// make an edge/connection between it and the head node
 			NODE *con = ht_get(table, tok);
 			if (NULL == con)
 			{
