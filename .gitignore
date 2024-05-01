@@ -53,3 +53,7 @@ dkms.conf
 
 # VSCode
 .vscode/
+
+# AoC files
+input.txt
+testinput*.txt

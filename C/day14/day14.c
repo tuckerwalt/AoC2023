@@ -271,7 +271,7 @@ void day14(FILE *pFile)
 	//start the maps offset by one spin
 	spin(map2, iDim);
 
-	//Classic two pointer loop detection: each cycle, spin the first map once and
+	//Two pointer loop detection: each cycle, spin the first map once and
 	//spin the second map twice. Eventually the maps will be identical given that there 
 	//is a loop.
 	for(long i = 0; i < 1000; i++)
